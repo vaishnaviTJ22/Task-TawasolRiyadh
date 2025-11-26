@@ -5,7 +5,7 @@ A simple 3D endless runner made in Unity where the ghost replicate yout movement
 ## Features
 - Auto-running player
 - One-click jump
-- Ghost replay of your last run
+- Ghost replay of your last frame run
 - Procedural platform generation
 - Object pooling
 - Score & health system
@@ -33,6 +33,7 @@ A simple 3D endless runner made in Unity where the ghost replicate yout movement
 - `PlatformSpawner` – Endless platform generation
 - `SpeedController` – Increasing speed
 - `GameManager` – Score, health, game flow
+- `UIManager` – Update score on UI
 
 ## Project Structure
 ```
@@ -43,6 +44,7 @@ Assets/
   Materials/
   Models/
   Shaders/
+  Inputs/
 ```
 
 ## How to Run
