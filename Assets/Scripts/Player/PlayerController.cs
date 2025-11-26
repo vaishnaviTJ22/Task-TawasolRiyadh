@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] private float moveSpeed = 10f;
+    [Header("Movement - Adjust in Speed Controller")]
+
 
     [Header("Jump")]
     [SerializeField] private float jumpForce = 7f;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     void MoveForward()
     {
-        Vector3 forwardVel = transform.forward * moveSpeed;
+        Vector3 forwardVel = transform.forward * SpeedController.Instance.currentSpeed;
         rb.linearVelocity = new Vector3(forwardVel.x, rb.linearVelocity.y, forwardVel.z);
     }
 

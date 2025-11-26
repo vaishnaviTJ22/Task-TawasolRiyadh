@@ -9,10 +9,10 @@ public class SpeedController : MonoBehaviour
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float maxSpeed = 15f;
 
-    private float currentSpeed;
+    public float currentSpeed;
     private bool isActive = true;
 
-    public float Speed => currentSpeed;
+   
 
     void Awake()
     {
@@ -24,12 +24,13 @@ public class SpeedController : MonoBehaviour
 
     void Start()
     {
+        isActive = true;
         currentSpeed = initialSpeed;
     }
 
     void Update()
     {
-        if (!isActive) return;
+        if (!isActive || GameManager.Instance.IsGameOver) return;
 
         if (currentSpeed < maxSpeed)
         {
@@ -37,6 +38,4 @@ public class SpeedController : MonoBehaviour
         }
     }
 
-    public void Pause() => isActive = false;
-    public void Resume() => isActive = true;
 }
