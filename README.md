@@ -1,78 +1,57 @@
-Endless Runner with Ghost Replay – Game Document
-📋 Overview
+# Endless Runner with Ghost Replay
 
-Genre: Endless Runner
-Platform: PC (Keyboard / Gamepad)
-Engine: Unity 6000.0+
-Render Pipeline: Universal Render Pipeline (URP)
+A simple 3D endless runner made in Unity where you race against a ghost of your previous run.
 
-A 3D endless-runner game where the player races forward automatically through procedurally generated platforms, collects items, avoids obstacles, and competes against a ghost replay of their previous run.
+## Features
+- Auto-running player
+- One-button jump
+- Ghost replay of your last run (0.5s delay)
+- Procedural platform generation
+- Object pooling
+- Score & health system
+- URP neon glow visuals
 
-✨ Features
+## Controls
+- **Space / Gamepad South Button** – Jump
 
-🏃 Auto-Running Gameplay
-Continuous forward movement with gradually increasing difficulty.
+## Gameplay
+- Player runs automatically
+- Collect items for **+10 score**
+- Avoid obstacles (**-1 health**)
+- When you die, your run becomes the ghost
+- Restart and try to beat your previous run
 
-👻 Ghost Replay System
-Replays your previous run with a 0.5s delay so you can race against yourself.
+## Requirements
+- Unity **6000.0+**
+- URP **17.0.4**
+- Input System **1.14.2**
 
-🎮 Simple Controls
-One-button jump mechanic.
+## Main Scripts
+- `PlayerController` – Player movement & jump
+- `GhostPlayerController` – Plays back previous run
+- `SyncManager` – Records ghost data
+- `PlatformSpawner` – Endless platform generation
+- `SpeedController` – Increasing speed
+- `GameManager` – Score, health, game flow
 
-🏗️ Procedural Generation
-Infinite platform spawning using a dynamic platform generator.
+## Project Structure
+```
+Assets/
+  Scenes/
+  Scripts/
+  Prefabs/
+  Materials/
+  Models/
+  Shaders/
+```
 
-♻️ Object Pooling
-Optimized performance by reusing platforms, obstacles, and collectables.
+## How to Run
+1. Open the project in Unity
+2. Open **Start.unity**
+3. Press Play
 
-📊 Score & Health System
-Collect items for points and avoid obstacles to survive.
+## Build
+1. Add `Start.unity` + `Game.unity` to Build Settings
+2. Choose platform
+3. Build
 
-🎨 Custom URP Shaders
-Neon glow and stylized visuals.
-
-🎮 How to Play
-Controls
-
-Space / Gamepad South Button – Jump
-
-Objective
-
-Survive as long as possible
-
-Collect items (+10 score)
-
-Avoid obstacles (−1 health)
-
-Beat the ghost replay of your last attempt
-
-Gameplay Loop
-
-Player automatically runs forward
-
-Speed gradually increases
-
-Jump to avoid obstacles and collect items
-
-When you die:
-
-Your run is stored as the ghost replay
-
-You restart and try to beat your previous ghost
-
-🛠️ Technical Details
-Requirements
-
-Unity 6000.0 or higher
-
-URP 17.0.4
-
-New Input System 1.14.2
-
-Packages Used
-
-com.unity.render-pipelines.universal – 17.0.4
-
-com.unity.inputsystem – 1.14.2
-
-com.unity.ugui – 2.0.0
