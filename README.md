@@ -1,25 +1,25 @@
-# Endless Runner with Ghost Replay
+# Endless Runner with Ghost
 
-A simple 3D endless runner made in Unity where you race against a ghost of your previous run.
+A simple 3D endless runner made in Unity where the ghost replicate yout movement.
 
 ## Features
 - Auto-running player
-- One-button jump
-- Ghost replay of your last run (0.5s delay)
+- One-click jump
+- Ghost replay of your last run
 - Procedural platform generation
 - Object pooling
 - Score & health system
 - URP neon glow visuals
 
 ## Controls
-- **Space / Gamepad South Button** – Jump
+- **Mouse Left click / Touch Screen(Single click)** – Jump
 
 ## Gameplay
 - Player runs automatically
 - Collect items for **+10 score**
 - Avoid obstacles (**-1 health**)
-- When you die, your run becomes the ghost
-- Restart and try to beat your previous run
+- When you die, the game end
+- Restart or Back home screen
 
 ## Requirements
 - Unity **6000.0+**
@@ -27,7 +27,7 @@ A simple 3D endless runner made in Unity where you race against a ghost of your 
 - Input System **1.14.2**
 
 ## Main Scripts
-- `PlayerController` – Player movement & jump
+- `PlayerController` – Jump
 - `GhostPlayerController` – Plays back previous run
 - `SyncManager` – Records ghost data
 - `PlatformSpawner` – Endless platform generation
